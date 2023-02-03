@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(224, 224, 97);
+    overflow: hidden;
+}
+
+.title_egg {
+    height: 40vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title_egg h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 6rem;
+    font-family: 'Potta One', cursive;
+    ;
+}
+
+.button_div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.button_strat {
+    width: 50vw;
+    height: 10vh;
+    padding: 3%;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Potta One', cursive;
+    color: #fff;
+    background-color: brown;
+    border: 3px solid black;
+    border-radius: 10px;
+    animation: button 3s linear infinite;
+}
+
+@keyframes button {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 4px 8px 10px #444;
+    }
+}
+
+.egg_img {
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.egg_img span {
+    height: 20vh;
+    width: 40%;
+    position: absolute;
+}
+
+.egg_img span:nth-child(1) {
+    border: 3px solid black;
+    border-radius: 50% 50% 49% 51% / 71% 72% 28% 29%;
+    background: radial-gradient(#f70, #fa0, #ddd, #ddd, #fff);
+    animation: move-y 2s ease-out infinite;
+}
+
+.egg_img span:nth-child(2) {
+    border-bottom: 3px solid black;
+    animation: anime_bottom 2s linear infinite;
+}
+
+.poyo-left {
+    text-align: left;
+    transform: rotate(-15deg);
+    font-weight: bold;
+    font-family: 'Potta One', cursive;
+    animation: poyo 2s linear infinite;
+}
+
+.poyo-left::before {
+    content: "\\";
+}
+
+.poyo-left::after {
+    content: "/";
+}
+
+.poyo-right {
+    text-align: right;
+    transform: rotate(15deg);
+    font-weight: bold;
+    font-family: 'Potta One', cursive;
+    animation: poyo 2s linear infinite;
+}
+
+.poyo-right::before {
+    content: "\\";
+}
+
+.poyo-right::after {
+    content: "/";
+}
+
+@keyframes anime_bottom {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70%,
+    90%,
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move-y {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    70% {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes poyo {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    70%,
+    90%,
+    100% {
+        opacity: 1;
+    }
+}
+
